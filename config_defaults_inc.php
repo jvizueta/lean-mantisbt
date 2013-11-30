@@ -2019,7 +2019,13 @@ $g_bug_resolution_not_fixed_threshold = UNABLE_TO_DUPLICATE;
  * closed when it is moved to a custom (COMPLETED or IMPLEMENTED) status.
  * @global int $g_bug_closed_status_threshold
  */
-$g_bug_closed_status_threshold = CLOSED;
+ 
+/*
+ * lean-mantisbt Issue #1 EliminateWaste: leave only indispensable statuses (new, assigned and resolved)
+ *
+ * */
+//$g_bug_closed_status_threshold = CLOSED;
+$g_bug_closed_status_threshold = RESOLVED;
 
 /**
  * Automatically set status to ASSIGNED whenever a bug is assigned to a person.
@@ -3263,7 +3269,12 @@ $g_reproducibility_enum_string = '10:always,30:sometimes,50:random,70:have not t
  *
  * @global string $g_status_enum_string
  */
-$g_status_enum_string = '10:new,20:feedback,30:acknowledged,40:confirmed,50:assigned,80:resolved,90:closed';
+
+/*
+ * lean-mantisbt Issue #1 EliminateWaste: leave only indispensable statuses (new, assigned and resolved)
+ * */
+//$g_status_enum_string = '10:new,20:feedback,30:acknowledged,40:confirmed,50:assigned,80:resolved,90:closed';
+$g_status_enum_string = '10:new,50:assigned,80:resolved';
 
 /**
  * @@@ for documentation, the values in this list are also used to define
